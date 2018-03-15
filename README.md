@@ -7,7 +7,7 @@ clone()은 사실상 fork()의 구현이다.
 
 | namespace | system parameter | 격리내용 |
 ------ | ------ | ---------------
-UTS | CLONE_NEWUTS | host네임, 도메인네임
+UTS | CLONE_NEWUTS | host네임, 도메인네임
 IPC | CLONE_NEWIPC | 시그널, 메세지큐와 공유 메모리
 PID | CLONE_NEWPID | 프로세스 ID
 Network | CLONE_NEWNET | 네트워크장비, 네트워크 스택, 포트 등 
@@ -23,7 +23,7 @@ cgroups 는 controller groups.
 1. 자원의 제한. cgroups의 task가 사용할 자원의 총량에 대해 제한한다. task가 이 제한을 초과하면 OOM(Out of Memory)가 발생된다.
 1. 우선순위 분배. CPU 시간 할당, 디스크 IO throughput를 할당하면서 사실상 task의 우선수위를 제한한것이다.
 1. 자원 통계. cgroups는 시스템 자원의 사용량에 대한 통계를 낼 수 있다. 예를 들어 cpu의 사용시간, 메모리의 사용량 등이다. 이는 과금에 대한 기능을 제공할 수 있다.
-1. task 컨트롤. cgroups는 task에 대해 대기, 재실행 등 작업을 실행할 수 있다.
+1. task 컨트롤. cgroups는 task에 대해 대기, 재실행 등 작업을 실행할 수 있다.
 
 ### cgoups 용어 설명
 * task는 프로세스일수도 있고 스레드 일 수도 있다.
